@@ -20,7 +20,7 @@
   import "src/components.typ": heavyrule, midrule
   import "src/template.typ": template, appendix, subheading, _outline, make-index, mainbody, preamble
   import "src/titlepage.typ": titlepage
-  import "src/environments.typ": _proposition, _highlighteq, _example, _definition, _proof
+  import "src/environments.typ": _proposition, _highlight, _example, _definition, _proof
   import "src/packages/marginalia.typ": _note, _notefigure, _wideblock
 
   let preset = if type(preset) == str {
@@ -59,7 +59,7 @@
     subheading: subheading.with(preset),
     outline: _outline.with(preset),
     proposition: _proposition.with(preset),
-    highlighteq: _highlighteq.with(preset),
+    highlight: _highlight.with(preset),
     example: _example.with(preset),
     definition: _definition.with(preset),
     proof: _proof.with(preset),

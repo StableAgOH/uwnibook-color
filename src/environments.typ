@@ -115,7 +115,7 @@
   } else if type(i18n) == str {
     (i18n, i18n)
   } else { panic("Invalid i18n entry for kind: " + kind) }
-  
+
   #figure(
     kind: kind,
     supplement: supplement,
@@ -172,10 +172,13 @@
   ..args,
 )
 
-#let _highlighteq(config, body) = {
-  $
-    #box(fill: config._color_palette.accent-light, stroke: config._color_palette.accent + 0.5pt, inset: 1em, body)
-  $
+#let _highlight(config, body) = {
+  align(center, box(
+    fill: config._color_palette.accent-light,
+    stroke: config._color_palette.accent + 0.5pt,
+    inset: 1em,
+    body,
+  ))
 }
 
 #let _definition(config, title: none, ..args) = environment(
